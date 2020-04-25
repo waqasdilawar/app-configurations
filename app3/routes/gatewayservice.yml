@@ -1,0 +1,10 @@
+applications:
+  service-id:
+    user-manager: USERMANAGER
+
+zuul:
+  routes:
+    roles:
+      path: /roles/**
+      service-id: ${applications.service-id.user-manager}
+      strip-prefix: false
